@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -55,12 +56,21 @@ export default function Navbar() {
         style={{ background: "rgba(30,58,138,0.95)" }}
       >
         <div className="flex justify-between items-center max-w-6xl mx-auto relative">
-          <Link
-            href="/"
-            className="logo text-2xl font-bold text-white z-20 relative"
-          >
-            Tekuvo Technologies
-          </Link>
+          <div className="w-28 h-15 ">
+            <Link
+              href="/"
+              className="logo z-20 relative flex justify-center items-center "
+            >
+              <Image
+                src="/logo.png"
+                alt="Tekuvo Technologies Logo"
+                width={180}
+                height={30}
+                className="object-contain absolute -top-7"
+                priority
+              />
+            </Link>
+          </div>
           {/* Desktop Nav */}
           <ul className="hidden md:flex gap-8 items-center">
             {links.map((link) => {
@@ -97,19 +107,17 @@ export default function Navbar() {
       </nav>
       {/* Sidebar Overlay */}
       <div
-        className={`fixed inset-0 bg-black/40 z-[99] transition-opacity duration-300 ${
-          sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/40 z-[99] transition-opacity duration-300 ${sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         aria-hidden={!sidebarOpen}
         onClick={() => setSidebarOpen(false)}
       />
       {/* Sidebar */}
       <aside
         className={`fixed top-0 right-0 md:hidden h-full w-72 bg-blue-900 text-white shadow-lg z-[100] transition-transform duration-300
-          ${
-            sidebarOpen
-              ? "translate-x-0"
-              : "translate-x-full"
+          ${sidebarOpen
+            ? "translate-x-0"
+            : "translate-x-full"
           }
         `}
         role="menu"
@@ -134,11 +142,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block py-3 px-4 rounded-lg transition font-medium ${
-                    isActive
+                  className={`block py-3 px-4 rounded-lg transition font-medium ${isActive
                       ? "bg-blue-800 text-blue-400 font-bold"
                       : "hover:bg-blue-800 text-white"
-                  }`}
+                    }`}
                   aria-current={isActive ? "page" : undefined}
                   onClick={() => setSidebarOpen(false)}
                 >

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Leading Web & App Development Company in Kerala",
+  description:
+    "Tekuvo Technologies is a leading software, web, and mobile app development company in Kerala. We deliver scalable digital solutions that empower business growth.",
+};
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutPreview from './components/AboutPreview';

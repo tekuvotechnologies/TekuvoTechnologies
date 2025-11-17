@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Contact Tekuvo Technologies | Web & App Development in Kerala",
+  description:
+    "Get in touch with Tekuvo Technologies, your trusted software, web, and app development partner in Kerala. Let's build your next digital success story together.",
+};
+
+
 import Navbar from '../components/Navbar';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';

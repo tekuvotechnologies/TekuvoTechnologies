@@ -1,3 +1,10 @@
+export const metadata = {
+  title: " Web, App & Software Development Services | Tekuvo Technologies Kerala",
+  description:
+    "Explore Tekuvo Technologies' professional services — web development, mobile app development, and software solutions for businesses across Kerala and India.",
+};
+
+
 import Navbar from '../components/Navbar';
 import ServiceDetails from '../components/ServiceDetails';
 import Footer from '../components/Footer';

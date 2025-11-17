@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "About Tekuvo Technologies",
+  description:
+    " Learn about Tekuvo Technologies — a trusted web and app development company in Kerala, India. We build innovative digital products that help businesses grow.",
+};
+
+
 import Navbar from '../components/Navbar';
 import MissionVisionValues from '../components/MissionVisionValues';
 import Footer from '../components/Footer';
